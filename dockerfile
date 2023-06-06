@@ -1,5 +1,5 @@
 FROM node
-WORKDIR .
+RUN ls
 RUN yarn
 RUN yarn build
 
