@@ -1,6 +1,5 @@
 FROM node
 WORKDIR .
-RUN npm install -g yarn
 RUN yarn
 RUN yarn build
 
