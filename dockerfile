@@ -1,7 +1,5 @@
-FROM node:14-alipne
+FROM node
+ADD /home/home_page_frontend /home
 WORKDIR /home/home_page_frontend
-RUN yarn && yarn build
-COPY /dist .
-
-FROM nginx
 RUN ls
+RUN yarn && yarn build
