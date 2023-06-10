@@ -1,8 +1,7 @@
-FROM node
-RUN ls
-RUN yarn
-RUN yarn build
+FROM node:14-alipne
+WORKDIR /home/home_page_frontend
+RUN yarn && yarn build
+COPY /dist .
 
 FROM nginx
-COPY dist/ /user/share/nginx/html/
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+RUN ls
