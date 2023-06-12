@@ -7,6 +7,8 @@
           class="el-menu-demo"
           mode="horizontal"
           @select="handleSelect"
+          text-color="#fff"
+          active-text-color="#ffd04b"
       >
         <el-menu-item index="1">网站首页</el-menu-item>
         <el-menu-item index="2">个人简介</el-menu-item>
@@ -55,7 +57,7 @@ body,
 #top {
   width: 100%;
   height: 8%;
-  background-color: #f9f9f9;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -77,6 +79,17 @@ body,
 
 .el-menu {
   width: 50%;
+  background-color: transparent;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.el-menu-item {
+  background-color: transparent !important;
+}
+
+.el-menu-item:hover {
+  background-color: transparent !important;
 }
 
 el-image {
