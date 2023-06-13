@@ -18,7 +18,9 @@
         <img src="../../public/peolpe.webp" style="width: 80%;height: 100%"/>
       </div>
       <div id="content">
-        <prefile-content />
+        <transition name="slide-fade" mode="out-in" :duration="{enter: 500, leave:800}">
+          <prefile-content/>
+        </transition>
       </div>
     </div>
   </div>
@@ -104,8 +106,20 @@ import prefileContent from '../components/prefileContent.vue'
   width: 30%;
   padding-right: 20px;
 }
+
 #content {
   width: 75%;
   height: 100%;
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

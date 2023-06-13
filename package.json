@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@iconify/json": "^2.2.77",
     "element-plus": "^2.3.6",
     "postcss-px-to-viewport": "^1.1.1",
     "unplugin-auto-import": "^0.16.4",
+    "unplugin-icons": "^0.16.3",
     "unplugin-vue-components": "^0.25.0",
     "vue": "^3.2.47",
     "vue-router": "4"

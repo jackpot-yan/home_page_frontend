@@ -14,6 +14,22 @@
       </span>
     </div>
     <div class="details">
+      <el-descriptions column="2">
+        <el-descriptions-item label="姓名">袁晓彤</el-descriptions-item>
+        <el-descriptions-item label="出生日期">1998/04/29</el-descriptions-item>
+        <el-descriptions-item label="名族">汉族</el-descriptions-item>
+        <el-descriptions-item label="手机">17695456429</el-descriptions-item>
+        <el-descriptions-item label="邮箱">wikileaks928@hotmail.com</el-descriptions-item>
+        <el-descriptions-item label="籍贯">甘肃省张掖市</el-descriptions-item>
+        <el-descriptions-item label="现居城市">湖北武汉</el-descriptions-item>
+        <el-descriptions-item label="毕业院校">天津财经大学</el-descriptions-item>
+      </el-descriptions>
+    </div>
+    <div class="icons">
+      <svg-icon icon-name="icon-yuanqqqingliao" style="height: 60px;width: 60px;padding: 20px"></svg-icon>
+      <svg-icon icon-name="icon-yuanBILIBILI_LOGO" style="height: 60px;width: 60px;padding: 20px"></svg-icon>
+      <svg-icon icon-name="icon-yuanweixin" style="height: 60px;width: 60px;padding: 20px"></svg-icon>
+      <svg-icon icon-name="icon-yuansteam" style="height: 60px;width: 60px;padding: 20px"></svg-icon>
     </div>
   </div>
 </template>
@@ -68,5 +84,14 @@
   line-height: 28px;
   font-size: 15px;
   word-break: break-word;
+}
+.details {
+  margin-top: 30px;
+}
+.icons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

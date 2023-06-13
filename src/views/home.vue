@@ -2,15 +2,12 @@
   <div id="home">
     <el-col>
       <div class="demo-basic--circle">
-        <el-avatar :size="200" :src="circleUrl"/>
+        <el-avatar :size="200" :src="'../../public/echo.jpg'"/>
       </div>
       <div class="home_title">一个编程界的小学生，目前居住在湖北武汉</div>
     </el-col>
   </div>
 </template>
-<script lang="ts" setup>
-const circleUrl = '../../public/echo.jpg'
-</script>
 <style>
 #home {
   width: 100%;
