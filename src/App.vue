@@ -10,27 +10,68 @@
           text-color="#fff"
           active-text-color="#ffd04b"
       >
-        <el-menu-item index="1">网站首页</el-menu-item>
-        <el-menu-item index="2">个人简介</el-menu-item>
-        <el-menu-item index="3">求学和工作</el-menu-item>
-        <el-menu-item index="4">专业技能</el-menu-item>
-        <el-menu-item index="5">闲时作品</el-menu-item>
-        <el-menu-item index="6">联系我</el-menu-item>
+        <el-menu-item index="1" @click="home">网站首页</el-menu-item>
+        <el-menu-item index="2" @click="profile">个人简介</el-menu-item>
+        <el-menu-item index="3" @click="work">求学和工作</el-menu-item>
+        <el-menu-item index="4" @click="skill">专业技能</el-menu-item>
+        <el-menu-item index="5" @click="experience">闲时作品</el-menu-item>
+        <el-menu-item index="6" @click="information">联系我</el-menu-item>
       </el-menu>
     </div>
     <div id="bottom">
-      这是正文
+      <router-view v-slot="{ Component }">
+        <transition name="scale" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 
 const activeIndex = ref('1')
+const route = useRouter()
 
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
+}
+
+const home = () => {
+  route.push({
+    name: 'home'
+  })
+}
+
+const profile = () => {
+  route.push({
+    name: 'profile'
+  })
+}
+
+const skill = () => {
+  route.push({
+    name: 'skill'
+  })
+}
+
+const experience = () => {
+  route.push({
+    name: 'experience'
+  })
+}
+
+const work = () => {
+  route.push({
+    name: 'work'
+  })
+}
+const information = () => {
+  route.push({
+    name: 'information',
+  })
 }
 </script>
 
@@ -80,10 +121,11 @@ body,
 }
 
 .el-menu {
-  width: 50%;
+  width: 70%;
   background-color: transparent;
   border-bottom: none;
   text-decoration: none;
+  justify-content: flex-end;
 }
 
 .el-menu-item {
@@ -101,5 +143,17 @@ el-image {
 img {
   width: 100%;
   height: 100%;
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 </style>
