@@ -9,7 +9,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const circleUrl = '../public/echo.jpg'
+const circleUrl = '../../public/echo.jpg'
 </script>
 <style>
 #home {
